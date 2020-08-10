@@ -1,0 +1,10 @@
+---
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Insstall LAMP software
+    yum:
+      name: httpd
+      state: latest
